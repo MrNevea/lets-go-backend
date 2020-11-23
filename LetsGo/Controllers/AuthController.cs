@@ -1,4 +1,5 @@
 ﻿using LetsGo.Core.Models;
+using LetsGo.Core.Resources.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +22,7 @@ namespace LetsGo.Api.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("Login")]
-        public IActionResult Login([FromBody] User user)
+        public IActionResult Login([FromBody] LoginUserResource user)
         {
             return Ok();
         }
@@ -29,7 +30,7 @@ namespace LetsGo.Api.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("Register")]
-        public IActionResult Register([FromBody] User user)
+        public IActionResult Register([FromBody] RegisterUserResource user)
         {
             return Ok();
         }
